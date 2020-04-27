@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Formulaires - Balise Datalist</title>
+
+</head>
+<body>
+
+<h1>Balise Datalist</h1>
+<!--autres éléments concernés-->
+<label for="note">Note obtenue : </label>
+<input id="note" type="range" list="notedata" min="0" max="20" value="10" step="1">
+<datalist id="notedata">
+	<option label="Minimum" value="0">
+	<option label="Maximum" value="20">
+</datalist>
+<br/><br/>
+<label for="www">Moteur de recherche favori : </label>
+<input id="www" type="url" list="moteur">
+<datalist id="moteur">
+	<option value="http://www.bing.com/">
+	<option value="http://www.google.fr/">
+	<option value="http://www.yahoo.fr/">
+</datalist>
+<br/><br/>
+<label for="mail">Adresse e-mail concernée : </label>
+<input id="mail" type="mail" list="mails">
+<datalist id="mails">
+	<option value="contact@html5.com">
+	<option value="prenom@html5.com">
+	<option value="livredepoche@html5.com">
+</datalist>
+<br/><br/>
+</body>
+</html>

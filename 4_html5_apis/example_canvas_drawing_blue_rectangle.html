@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Canvas - Drawing a rectangle</title>
+
+    
+      <script>
+		function blue_rectangle()	
+              {
+		var elem = document.getElementById('canvas');
+		var context = elem.getContext('2d');
+		context.clearRect(0,0,350,200);
+		context.fillStyle = '#0074ca';
+		context.fillRect(10,10,150,100);
+
+	}	
+	  </script>
+
+    
+    
+</head>
+<body onload="init()">
+
+	<div id="content">
+	
+   		   <header >
+		      <hgroup>
+			<h1>&lt;canvas&gt; element in HTML5</h1>
+			<h2>&lt;canvas&gt; tag</h2>
+		   </hgroup>
+		  </header>
+		  <hr>
+		  
+		  <div id="article_content">
+          	<canvas id="canvas" width="350" height="200" style="border: solid black 2px;">
+               Your browser does not support the &lt;canvas&gt; element.
+            </canvas>
+            <br/>
+            <button onclick="blue_rectangle()">Rectangle With Blue Background</button>
+        
+          </div>
+
+
+
+	</div>
+
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

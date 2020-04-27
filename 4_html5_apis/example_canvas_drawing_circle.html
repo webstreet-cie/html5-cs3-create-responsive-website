@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Canvas - Drawing a circle</title>
+
+	<style>
+		hgroup h1 {
+		font-size:30px;
+		font-weight:bold;
+		color:#3C7A9E;
+		}
+		
+		hgroup h2 {
+		font-size:26px;
+		font-weight:bold;
+		color:#4BA4D1;
+		}
+		
+		#article_content h1 {
+		font-size:20px;
+		font-weight:bold;
+		color: #C00;
+		}
+		 
+		#article_content h2 {
+		font-size:16px;
+		font-weight:bold;
+		color:#C6F;
+		}
+
+	</style>
+    
+      <script>
+			function draw_circle()
+			{
+				var cercle = document.getElementById("canvas");
+				var ctx = cercle.getContext("2d");
+				ctx.beginPath();
+				ctx.arc(95,50,40,0,2*Math.PI);
+				ctx.stroke();
+			}
+	  </script>
+
+    
+    
+</head>
+<body onload="init()">
+
+	<div id="content">
+	
+   		   <header>
+		   <hgroup>
+			<h1>&lt;canvas&gt; tag in HTML5</h1>
+			<h2>Drawing a circle</h2>
+		   </hgroup>
+		  </header>
+		  <hr>
+		  
+		  <div id="article_content">
+       	        <canvas id="canvas" width="350" height="200" style="border: solid black 2px;">
+                    Your browser does not support the &lt;canvas&gt; tag.
+                </canvas>
+                <br/>
+                <button onclick="draw_circle()">Drawing a circle</button>
+        
+          </div>
+
+
+
+	</div>
+
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

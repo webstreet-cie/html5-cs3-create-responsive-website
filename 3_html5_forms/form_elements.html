@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Form Elements</title>
+</head>
+<body>
+
+<form action="/signup" method="post" oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+  <p>
+    <label>Radio Buttons</label><br>
+    <label>
+      <input type="radio" name="title" value="mr">
+      Mr
+    </label>
+    <label>
+      <input type="radio" name="title" value="mrs">
+      Mrs
+    </label>
+    <label>
+      <input type="radio" name="title" value="miss">
+      Miss
+    </label>
+  </p>
+  <p>
+    <label>Text Box</label><br>
+    <input type="text" name="first_name">
+  </p>
+  <p>
+    <label>Text Box</label><br>
+    <input type="text" name="last_name">
+  </p>
+  <p>
+    <label>Email Input</label><br>
+    <input type="email" name="email" required>
+  </p>
+  <p>
+    <label>Phone Input</label><br>
+    <input type="tel" name="phone">
+  </p>
+  <p>
+    <label>Password Input</label><br>
+    <input type="password" name="password">
+  </p>
+  <p>
+    <label>DropDown</label><br>
+    <select name="values1">
+      <option value="value1">Value1</option>
+      <option value="value2">Value2</option>
+      <option value="value3">Value3</option>
+    </select>
+  </p>
+   <p>
+    <label>DropDown Size</label><br>
+    <select name="values2" size="2">
+      <option value="value1">Value1</option>
+      <option value="value2">Value2</option>
+      <option value="value3">Value3</option>
+    </select>
+  </p>
+  
+    <p>
+    <label>Choose the category you want to subscribe (multiple authorized)</label><br>
+    <select name="values2" size="4" multiple>
+      <option value="value1">Design</option>
+      <option value="value2">Development</option>
+      <option value="value3">Photoshop</option>
+    </select>
+  </p>
+  <p>
+    <label for="checkbox">Checkbox</label>
+	<br/>
+      <input type="checkbox" value="terms">
+      
+    </label>
+  </p>
+  
+  <p>
+    <label for="checkbox">Towns I have visited</label>
+	<br/>
+	   <input type="checkbox" id="paris" name="visited_towns" value="Paris">
+	  <label for="visited_towns">Paris</label><br>
+	  <input type="checkbox" id="london" name="vehicle2" value="London">
+	  <label for="vehicle2">London</label><br>
+	  <input type="checkbox" id="spain" name="vehicle3" value="Spain">
+	  <label for="vehicle3">Spain</label><br><br>
+      
+    </label>
+  </p>
+  <p>
+  <label for="textbox">Text Area</label>
+  <br/>
+  <textarea name="comment"  rows="20" cols="50">I would like to change my website for a more modern and responsive one. Can you help me please and recontact me by phone?</textarea>
+  </p>
+  
+  <p>
+  <label for="textbox">File Input</label>
+  <br/>
+  
+  <input type="file" name="image">
+  </p>
+  
+  <p>
+   <label for="textbox">Output Element</label>
+  <br/>
+   <input type="range" name="b" value="50" /> +
+    <input type="number" name="a" value="10" /> =
+    <output name="result">60</output>
+  <br><br>
+  </p>
+  <p>
+    <button type="submit">Submit Button</button>
+  </p>
+</form>
+</body>
+</html>

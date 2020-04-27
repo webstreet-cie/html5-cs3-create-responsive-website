@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Canvas Tag</title>
+
+	<style>
+		hgroup h1 {
+		font-size:30px;
+		font-weight:bold;
+		color:#3C7A9E;
+		}
+		
+		hgroup h2 {
+		font-size:26px;
+		font-weight:bold;
+		color:#4BA4D1;
+		}
+		
+		#article_content h1 {
+		font-size:20px;
+		font-weight:bold;
+		color: #C00;
+		}
+		 
+		#article_content h2 {
+		font-size:16px;
+		font-weight:bold;
+		color:#C6F;
+		}
+
+	</style>
+    
+      <script>
+		function init()
+		{    var elem = document.getElementById('canvas');
+			var context = elem.getContext('2d');
+			var img = new Image();
+			img.onload = function()
+			{ context.drawImage(img,0,0); }
+			img.src = "images/asyos_engine.png"; }
+	  </script>
+
+    
+    
+</head>
+<body onload="init()">
+
+<div id="content">
+	
+   		   <header>
+		   <hgroup>
+			<h1>&lt;canvas&gt; element in HTML5</h1>
+			<h2>&lt;canvas&gt; tag</h2>
+		   </hgroup>
+		  </header>
+		  <hr>
+		  
+		  <div id="article_content">
+          	  <canvas id="canvas" width="300" height="75">
+                   Your browser does not support the &lt;canvas&gt; tag.
+                </canvas>
+        
+          </div>
+
+
+
+	</div>
+
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

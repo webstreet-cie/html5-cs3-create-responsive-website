@@ -1,0 +1,141 @@
+﻿<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 tables</title>
+
+	<style>
+		hgroup h1 {
+		font-size:30px;
+		font-weight:bold;
+		color:#3C7A9E;
+		}
+
+		hgroup h2 {
+		font-size:26px;
+		font-weight:bold;
+		color:#4BA4D1;
+		}
+
+		#article_content h1 {
+		font-size:20px;
+		font-weight:bold;
+		color: #C00;
+		}
+
+		#article_content h2 {
+		font-size:16px;
+		font-weight:bold;
+		color:#C6F;
+		}
+
+		table {
+		width:800px;
+		text-align:center;
+		border:solid red 1px;
+
+
+		}
+
+		table th, td {
+		border:solid black 1px;
+		padding:0px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="content">
+	   <article>
+		 <header>
+		   <hgroup>
+			<h1>HTML5 &lt;table&gt; tag</h1>
+			<h2>Create tables easily with HTML5!</h2>
+		   </hgroup>
+		  </header>
+		  <hr>
+
+		  <div id="article_content">
+          <h1>Simple Table</h1>
+          <table>
+           <caption> Charles Aznavour - Live</caption>
+
+              <thead>
+                 <tr><th>Title</th><th>Language</th></tr>
+               </thead>
+               <tfoot>
+                   <tr><th>Title</th><th>Language</th></tr>
+               </tfoot>
+               <tbody>
+                  <tr><td>You and me</td><td>English</td></tr>
+                  <tr><td>La boheme</td><td>French</td></tr>
+                  <tr><td>Venezia Sin Ti</td><td>Italian</td></tr>
+                </tbody>
+         </table>
+         <br>
+         <table>
+           <thead>
+             <tr><th>Firstname</th><th>Lastname</th></tr>
+           </thead>
+           <tbody>
+             <tr><td>Paul</td><td>Smith</td></tr>
+              <tr><td>Kate</td><td>Middleton</td></tr>
+           </tbody>
+
+         </table>
+
+         <h1>Table with colspan</h1>
+         <table>
+           <tr>
+               <th>Movie Title</th>
+               <th>For children?</th>
+               <th>For adults?</th>
+            </tr>
+           <tr>
+               <td>Scream</td>
+               <td >No, too violent</td>
+               <td>Yes</td>
+            </tr>
+           <tr>
+               <td>Shrek 2</td>
+               <td>Yes</td>
+               <td>Not violent enough...</td>
+            </tr>
+            <tr>
+                 <td>Camping Paradise</td>
+                 <td colspan="2">For the whole family!</td>
+            </tr>
+        </table>
+
+        <h1>Table with rowspan</h1>
+        <table>
+           <tr>
+               <th>Movie Title</th>
+               <td>Scream</td>
+               <td>Shrek 2</td>
+               <td>Camping Paradise</td>
+           </tr>
+           <tr>
+               <th>For children?</th>
+               <td>No, too violent</td>
+               <td>Yes</td>
+               <td rowspan="2">For the whole family!</td>
+            </tr>
+           <tr>
+              <th>For adults?</th>
+              <td>Yes</td>
+              <td>Not violent enough...</td>
+            </tr>
+        </table>
+
+          </div>
+
+
+	   </article>
+
+
+	</div>
+
+
+</body>
+</html>

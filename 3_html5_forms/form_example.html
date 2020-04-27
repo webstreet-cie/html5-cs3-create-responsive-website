@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Form Elements</title>
+</head>
+<body>
+
+<form action="/signup" method="post">
+  <p>
+    <label>Title</label><br>
+    <label>
+      <input type="radio" name="title" value="mr">
+      Mr
+    </label>
+    <label>
+      <input type="radio" name="title" value="mrs">
+      Mrs
+    </label>
+    <label>
+      <input type="radio" name="title" value="miss">
+      Miss
+    </label>
+  </p>
+  <p>
+    <label>First name</label><br>
+    <input type="text" name="first_name">
+  </p>
+  <p>
+    <label>Last name</label><br>
+    <input type="text" name="last_name">
+  </p>
+  <p>
+    <label>Email</label><br>
+    <input type="email" name="email" required>
+  </p>
+  <p>
+    <label>Phone number</label><br>
+    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="^[(]?\d{3}[)]?[(\s)?.-]\d{3}[\s.-]\d{4}$" required>
+  </p>
+  <p>
+    <label>Password</label><br>
+    <input type="password" name="password">
+  </p>
+  <p>
+    <label>Country</label><br>
+    <select>
+      <option>China</option>
+      <option>India</option>
+      <option>United States</option>
+      <option>Indonesia</option>
+      <option>Brazil</option>
+    </select>
+  </p>
+  <p>
+  <label for="birthday">Date of Birth:</label>
+  <input type="date" id="birthday" name="birthday">
+  </p>
+  <p>
+    <label for="myfile">Select a picture for your profile:</label>
+    <input type="file" id="myfile" name="myfile">
+  </p>
+  <p>
+  <label for="website">Add your website link:</label>
+  <input type="url" id="website" name="website">
+  </p>
+  <p>
+    <label for="quantity">How many browsers do you use (between 1 and 5)?</label>
+	  <br/><br/>
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+  </p>
+  
+  <p>
+  <label for="vol">Number of buildings to control (between 0 and 100):</label>
+  <br/><br/>
+  <input type="range" id="vol" name="vol" min="0" max="100" step="1">
+  </p>
+  <p>
+  <label for="favcolor">What's your favorite color?</label>
+  <input type="color" id="favcolor" name="favcolor">
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" value="terms">
+      I agree to the <a href="/terms">terms and conditions</a>
+    </label>
+  </p>
+  <p>
+    <button type="submit">Sign up</button>
+    <button type="reset">Reset form</button>
+  </p>
+</form>
+</body>
+</html>

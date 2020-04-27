@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Formulaires - Balise Output</title>
+
+</head>
+<body>
+
+<h1>Balise Output</h1>
+<form  onsubmit="return false" method="post" id="tva_form" oninput="ttc.value = ht.value * (1 + tva.value/100)">
+	<p>
+		  <label for="t_ht">Tarif HT</label>
+		  <input type="number" name="ht" id="t_ht"> €
+	   </p>
+	   <p>
+		  <label for="t_tva">TVA</label>
+		  <input type="number" name="tva" id="t_tva" value="19.6"> %
+	   </p>
+	   <p>
+		  Prix TTC : 
+		  <output for="t_ht t_tva" name="ttc" form="tva_form"></output> €
+	   </p>
+	   <input type="submit" value="Calculer">
+</form>
+</body>
+</html>

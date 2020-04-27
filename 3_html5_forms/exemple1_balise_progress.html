@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Formulaires - Balise Progress</title>
+  <style>
+
+  </style>
+  <script>
+/*Cette fonction stocke au sein de 2 variables la barre de progression et le span devant contenir la valeur.*/
+	function avancement() {
+	  var ava = document.getElementById("avancement");
+	  var prc = document.getElementById("pourcentage");
+/*La propriété innerHTML permet de modifier le contenu HTML d'un élément : ici on ajouter un '%' ainsi qu'une valeur au span*/
+	  prc.innerHTML = ava.value + "%";
+	}
+/*Pour faire progresser la barre, un appel à la fonction modif(val) est effectué. À l'aide d'une condition qui est la suivante : si la value de l'élément à l'id avancement additionné à la valeur "cliquée" (-10 ou 10) est inférieure à la valeur contenue dans l'attribut max (ici 100) ET supérieure à 0 alors on ajoute la valeur de val (-10 ou 10) au value de <progress>. Puis on met à jour la value représentant le pourcentage.*/
+	function modif(val) {
+	  var ava = document.getElementById("avancement");
+	  if((ava.value+val)<=ava.max && (ava.value+val)>0) {
+		 ava.value += val;
+	  }
+	  avancement();
+	}
+  </script>
+</head>
+<body>
+        <p>Avancement de la tâche à effectuer :
+       <progress id="avancement" value="50" max="100"></progress>
+       <span id="pourcentage"></span>
+       <input type="button" onclick="modif(-10);" value="-">
+       <input type="button" onclick="modif(10);" value="+">
+       </p>
+</body>
+</html>

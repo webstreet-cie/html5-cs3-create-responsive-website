@@ -1,0 +1,59 @@
+.blue_text {
+  color:aliceblue;
+}
+
+#first_para {
+  text-align: center;
+}
+
+#second_para {
+  text-align: left;
+}
+
+#third_para {
+  text-align: right;
+}
+
+#fourth_para {
+  text-align: justify;
+}
+
+.under {
+   text-decoration: underline;
+}
+
+.over {
+   text-decoration: overline;
+}
+
+.line_through {
+   text-decoration: line-through;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.lower {
+  text-transform: lowercase;
+}
+
+.cap {
+    text-transform: capitalize;
+}
+
+.text_indented {
+  text-indent: 50px;
+}
+
+.letter_spacing {
+   letter-spacing: 20px;
+}
+
+.word_spacing {
+   word-spacing: 20px;
+}
+
+.line_height {
+   line-height: 2;
+}

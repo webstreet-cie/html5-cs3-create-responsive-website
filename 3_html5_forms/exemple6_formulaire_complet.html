@@ -1,0 +1,137 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <title>Formulaire HTML5</title>
+    <style>
+        body{
+          background-image: url(background.png);
+          font-family: 'Open Sans',sans-serif;
+          font-weight: 400;
+          font-size: 13px;
+        }
+        
+        :invalid { 
+          background-color: blue;
+          border-color: #e88;
+          -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+          -moz-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
+          -o-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
+          -ms-box-shadow: 0 0 5px rbba(255, 0, 0, .8);
+          box-shadow:0 0 5px rgba(255, 0, 0, .8);
+        }
+
+        :required {
+          border-color: #88a;
+          -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+          -moz-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+          -o-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+          -ms-box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+          box-shadow: 0 0 5px rgba(0, 0, 255, .5);
+        }
+
+        form {
+          width:300px;
+          margin: 20px auto;
+        }
+
+        input {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          border:1px solid #ccc;
+          font-size:20px;
+          width:300px;
+          min-height:30px;
+          display:block;
+          margin-bottom:15px;
+          margin-top:5px;
+          outline: none;
+
+          -webkit-border-radius:5px;
+          -moz-border-radius:5px;
+          -o-border-radius:5px;
+          -ms-border-radius:5px;
+          border-radius:5px;
+        }
+
+        input[type=submit] {
+          background:none;
+          padding:10px;
+          cursor: pointer;
+        }
+	
+	 :invalid[type=submit] {
+          background-color:red;
+        }
+	
+	 input[type=email] {
+          background:none;
+          padding:10px;
+          cursor: pointer;
+        }
+        
+        label{
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form oninput="total.value = (nights.valueAsNumber * 99) + 
+     ((guests.valueAsNumber - 1) * 10)">
+
+      <label>Nom complet :</label>
+      <input type="text" id="full_name" name="full_name" placeholder="Roxane Anquetil" required>
+
+      <label>Adresse e-mail :</label>
+      <input type="email" id="email_addr" name="email_addr" required>
+
+      <label>Confirmez l'adresse e-mail :</label>
+      <input type="email" id="email_addr_repeat" name="email_addr_repeat" required 
+       oninput="check(this)">
+       
+        <label>Tel :</label>
+      <input type="tel" id="tel" name="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-|
+)?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required>
+
+<label>Recherche rapide :</label>
+<input type="search" name="search">
+
+      <label>Date d'arrivée :</label>
+      <input type="date" id="arrival_dt" name="arrival_dt" required>
+      
+      <label>Nombre de nuitées (99 € par nuit) :</label>
+      <input type="number" id="nights" name="nights" value="1" min="1" max="30" required>
+
+      <label>Nombre d'invités (10 € par invité supplémentaire) :</label>
+      <input type="number" id="guests" name="guests" value="1" min="1" max="4" required>
+
+      <label>Total :</label>
+      <output id="total" name="total">99</output>.00 €
+      <br><br>
+
+      <label>Code de promotion :</label>
+      <input type="text" id="promo" name="promo" pattern="[A-Za-z0-9]{6}" 
+       title="Le code de promotion contient six caractères alphanumériques.">
+       
+       <label>Choix d’une couleur :</label>
+	<input type="color" value="#F0F8FF" name="textcolor" onchange="alert(this.value)">
+
+      <input type="submit" value="Effectuer la réservation" /> 
+    </form>
+
+    <script>
+    function check(input) {
+      if (input.value != document.getElementById('email_addr').value) {
+        input.setCustomValidity('Les deux adresses e-mail ne correspondent pas.');
+      } else {
+        // le champ est valide : on réinitialise le message d'erreur
+        input.setCustomValidity('');
+      }
+    }
+    </script>
+</body>
+</html>
+
+
+
+
+

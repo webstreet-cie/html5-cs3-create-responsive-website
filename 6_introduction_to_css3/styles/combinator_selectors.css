@@ -1,0 +1,30 @@
+
+p, h1,h2 {
+  text-align:center;
+}
+
+h1 {
+  background-color:lightgray;
+  color:white;
+}
+
+
+nav p {
+  background-color:pink;
+  text-align: center;
+}
+
+header > p {
+  background-color:green;
+  text-align: center;
+}
+
+section + p {
+  background-color:red;
+  text-align: center;
+}
+
+article ~ p {
+  background-color:red;
+  text-align: center;
+}

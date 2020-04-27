@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Canvas - Radial Gradient</title>
+
+	<style>
+		hgroup h1 {
+		font-size:30px;
+		font-weight:bold;
+		color:#3C7A9E;
+		}
+		
+		hgroup h2 {
+		font-size:26px;
+		font-weight:bold;
+		color:#4BA4D1;
+		}
+		
+		#article_content h1 {
+		font-size:20px;
+		font-weight:bold;
+		color: #C00;
+		}
+		 
+		#article_content h2 {
+		font-size:16px;
+		font-weight:bold;
+		color:#C6F;
+		}
+
+	</style>
+    
+      <script>
+			function drawShape(){
+		  // isoler le canvas par l'intermédiaire du DOM
+		  var canvas = document.getElementById('mycanvas');
+		
+		   // S'assurer que le code n'est pas exécuté si la balise n'est pas supportée
+		  if (canvas.getContext){
+		
+			// Mettre en place le contexte 2d
+			var ctx = canvas.getContext('2d');
+		
+			// Créer le gradient radial
+			var radgrad = ctx.createRadialGradient(45,45,10,52,50,30);
+			radgrad.addColorStop(0, '#A7D30C');
+			radgrad.addColorStop(0.9, '#019F62');
+			radgrad.addColorStop(1, 'rgba(1,159,98,0)');
+		
+			// Assigner le dégradé au style de remplissage "fillStyle"
+			ctx.fillStyle = radgrad;
+		
+			// Dessiner la forme avec la fonction "fillRect"
+			ctx.fillRect(0,0,150,150);
+			} else {
+			alert('You need Safari or Firefox 1.5+ to visualize this demo.');
+		  }
+		}
+	  </script>
+
+    
+    
+</head>
+<body onload="drawShape()">
+
+	<div id="content">
+	
+   		   <header>
+		   <hgroup>
+			<h1>&lt;canvas&gt; tag in HTML5</h1>
+			<h2>Radial Gradient</h2>
+		   </hgroup>
+		  </header>
+		  <hr>
+		  
+		  <div id="article_content">
+            <canvas id="mycanvas"></canvas>
+        
+          </div>
+
+
+
+	</div>
+
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

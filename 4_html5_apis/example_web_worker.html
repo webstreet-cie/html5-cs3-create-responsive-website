@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><output id="result"></output></p>
+<button onclick="startWorker()">Launch Worker</button>
+
+<script>
+var worker;
+
+function startWorker() {
+  if (typeof(Worker) !== "undefined") {
+    if (typeof(worker) == "undefined") {
+      worker = new Worker("js/worker.js");
+    }
+	worker.addEventListener('message', function(e) {
+	 document.getElementById("result").innerHTML = e.data;
+	}, false);
+	
+	worker.postMessage('Hello user! Your worker is working!'); // Send data to our worker.
+  } else {
+    document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+  }
+}
+
+</script>
+
+</body>
+</html>

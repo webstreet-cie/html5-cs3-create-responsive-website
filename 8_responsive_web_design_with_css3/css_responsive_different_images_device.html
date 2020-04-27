@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* For width smaller than 600px: */
+body {
+  background-repeat: no-repeat;
+  background-image: url('images/banner_small.png'); 
+}
+
+/* For width 600px and larger: */
+@media only screen and (min-width: 600px) {
+  body { 
+     background-image: url('images/banner_big.png'); 
+  }
+}
+
+p {
+color:white;
+margin-top:150px;
+font-size:6vw;
+}
+</style>
+</head>
+<body>
+
+<p>Resize the browser width! The background image will change at 600px.</p>
+
+</body>
+</html>

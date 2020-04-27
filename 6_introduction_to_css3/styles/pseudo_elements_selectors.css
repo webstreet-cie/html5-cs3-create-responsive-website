@@ -1,0 +1,21 @@
+p::first-line {
+  color: pink;
+  font-variant: small-caps;
+}
+
+div::first-letter {
+  color: red;
+  font-variant: small-caps;
+  font-weight:bold;
+}
+
+q::before {
+  content: '"';
+  color: green;
+  font-size: 20px;
+}
+q::after {
+  content: '"';
+  color: red;
+  font-size: 20px;
+}
